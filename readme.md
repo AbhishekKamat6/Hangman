@@ -1,0 +1,1 @@
+This repo is for creating a hangman game including some learning in react
