@@ -4,7 +4,7 @@ function Button(props) {
 
   return (
     <>
-      <button>{props.text}</button> /*This is called as JSX curlies where we can have a valid opertions*/
+      <button>{props.text}</button> {/*This is called as JSX curlies where we can have a valid opertions*/}
     </>
   );
 }
