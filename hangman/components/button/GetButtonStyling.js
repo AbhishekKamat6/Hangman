@@ -6,4 +6,7 @@ export function getButtonStyling(styleType){
     }else if(styleType === "error"){
       return "bg-red-500 test-white"
     }
+    else if(styleType === "warning"){
+      return "bg-orange-500 test-white"
+    }
   }
