@@ -1,11 +1,11 @@
+import "./Button.css"
+
 function Button({ text, onClickHandler }) {
   return (
     <>
       <button 
-             onClick={onClickHandler} 
-             style={{ 'backgroundColor': "blue" , 'color':"white"}} 
-             /* 👉 Outer {} → Marks a JavaScript expression in JSX.
-                👉 Inner {} → Represents the actual object with CSS properties. */
+             onClick = {onClickHandler} 
+             className = "text"
       >
         {text}
       </button>
