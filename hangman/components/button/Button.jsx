@@ -1,10 +1,15 @@
-function Button(props) {
-    
-    console.log(props.text);
-
+function Button({ text, onClickHandler }) {
   return (
     <>
-      <button>{props.text}</button> {/*This is called as JSX curlies where we can have a valid opertions*/}
+      <button 
+             onClick={onClickHandler} 
+             style={{ 'backgroundColor': "blue" , 'color':"white"}} 
+             /* 👉 Outer {} → Marks a JavaScript expression in JSX.
+                👉 Inner {} → Represents the actual object with CSS properties. */
+      >
+        {text}
+      </button>
+      {/*This is called as JSX curlies where we can have a valid opertions and also this is how we destructure the props*/}
     </>
   );
 }
