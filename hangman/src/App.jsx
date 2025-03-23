@@ -7,8 +7,8 @@ function App() {
    <div>
     {/* This is the advantage of JSX where we can use reusable components */}
     <Button text = "CLICK ME" onClickHandler = {()=>console.log("click me")} />
-    <Button text = "CLICK ME 1" onClickHandler = {()=>console.log("click me 1")} />
-    <Button text = "CLICK ME 2" onClickHandler = {()=>console.log("click me 2")} />
+    <Button text = "CLICK ME 1" onClickHandler = {()=>console.log("click me 1")} styleType="error" />
+    <Button text = "CLICK ME 2" onClickHandler = {()=>console.log("click me 2")} styleType="secondary"/>
    </div>
   )
 }
