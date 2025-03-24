@@ -52,7 +52,8 @@ function TextInputForm(){
                 <Button 
                   styleType="warning"
                   text  = {text}
-                  onClickHandler={handleShowHideClick}
+                  onClickHandler={handleShowHideClick} // passing the callback function (A callback function is a function that is passed as an argument) to the child and is excuted 
+                                                       // when the button is clicked
                 />
             </div>
 

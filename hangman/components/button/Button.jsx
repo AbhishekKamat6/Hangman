@@ -1,12 +1,17 @@
 import { getButtonStyling } from "./GetButtonStyling";
 
-function Button({ text, onClickHandler , styleType = "primary" , type = "button" }) {
+function Button({
+  text,
+  onClickHandler,
+  styleType = "primary",
+  type = "button",
+}) {
   return (
     <>
-      <button 
-             onClick = {onClickHandler} 
-             className = {`px-4 py-2 ${getButtonStyling(styleType)}`}
-             type = {type}
+      <button
+        onClick={onClickHandler}
+        className={`px-4 py-2 ${getButtonStyling(styleType)}`}
+        type={type}
       >
         {text}
       </button>
