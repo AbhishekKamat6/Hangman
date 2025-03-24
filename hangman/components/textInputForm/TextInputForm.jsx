@@ -2,7 +2,7 @@ import TextInput from "../textinput/TextInput";
 import Button from "../button/Button"
 import { useState } from "react";
 
-function TextInputForm(){
+function TextInputForm({handleFormSubmit,handleTextInput,handleShowHideClick,text,inputType}){
 
 
     //  let inputType = "text";
@@ -11,30 +11,10 @@ function TextInputForm(){
     // In functional components, each render is like a fresh function call.
     // If you use let, it gets reset every time the component re-renders and because of which everytime the function is called and inputType is set as text
 
-    const [inputType,setInputType] = useState('password'); 
     // The useState hook in React returns an array which we destructure. The first element of the array is a state variable and the second element is a function that updates the state.
 
-    const [text,setText] = useState('Show');
 
-    function handleFormSubmit(event){
-      event.preventDefault(); // Stops form from submitting
-    }
 
-    function handleTextInput(event){
-      console.log(event.target.value)
-    }
-
-    function handleShowHideClick(){
-      if(inputType == "password"){
-         setInputType("text");
-         setText("Hide")
-      }
-      else{
-         setInputType("password");
-         setText("Show")
-      }
-      console.log(inputType,"is the type")
-    }
 
     return (
         <>

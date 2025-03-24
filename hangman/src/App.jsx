@@ -1,13 +1,11 @@
-import Button from "../components/button/Button"
-import TextInput from "../components/textinput/TextInput"
-import TextInputForm from "../components/textInputForm/TextInputForm"
+import TextInputFormContainer from "../components/textInputForm/TextInputFormContainer"
 
 
 function App() {
 
   return (
    <>
-    <TextInputForm/>
+    <TextInputFormContainer/>
    </>
   )
 }
