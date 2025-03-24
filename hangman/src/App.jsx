@@ -1,12 +1,15 @@
-import TextInputFormContainer from "../components/textInputForm/TextInputFormContainer"
+import { Routes , Route } from "react-router-dom"
+import StartGame from "../pages/StartGame"
+import PlayGame from "../pages/PlayGame"
 
 
 function App() {
 
   return (
-   <>
-    <TextInputFormContainer/>
-   </>
+      <Routes>
+        <Route path = '/' element = {<StartGame/>} />{/*says that for which link what page should be shown*/}
+        <Route path = '/play' element = {<PlayGame/>}/>
+      </Routes>
   )
 }
 

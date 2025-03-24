@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import TextInputFormContainer from "../components/textInputForm/TextInputFormContainer";
+
 function StartGame(){
 
     // return (
@@ -13,7 +16,8 @@ function StartGame(){
 
     return(
         <>
-         <h1>Start Game</h1>
+         <Link to = "/play">Start a game</Link>
+         <TextInputFormContainer/>
         </>
     )
 

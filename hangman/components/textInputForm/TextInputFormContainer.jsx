@@ -7,8 +7,10 @@ function TextInputFormContainer(){
     // The useState hook in React returns an array which we destructure. The first element of the array is a state variable and the second element is a function that updates the state.
     
     const [text,setText] = useState('Show');
+    
+    const [value,setValue] = useState('');
 
-    function handleFormSubmit(event){
+      function handleFormSubmit(event){
         event.preventDefault(); // Stops form from submitting
       }
   

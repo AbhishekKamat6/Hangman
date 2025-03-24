@@ -1,6 +1,5 @@
 import TextInput from "../textinput/TextInput";
 import Button from "../button/Button"
-import { useState } from "react";
 
 function TextInputForm({handleFormSubmit,handleTextInput,handleShowHideClick,text,inputType}){
 
