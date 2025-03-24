@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TextInputForm from "./TextInputForm";
+import { useNavigate } from "react-router-dom";
 
 function TextInputFormContainer(){
     
@@ -10,12 +11,19 @@ function TextInputFormContainer(){
     
     const [value,setValue] = useState('');
 
+    const navigate = useNavigate();  // The useNavigate hook is used to navigate to a different route in the application. It returns a navigate function which can be called to navigate to a different route.
+
       function handleFormSubmit(event){
         event.preventDefault(); // Stops form from submitting
+          setTimeout(() => {
+            if(value){
+              navigate("/play",{state:{guessWord : value}}); // The navigate function is called to navigate to the /play route with the guessWord value
+            }
+          }, 5000);
       }
   
       function handleTextInput(event){
-        console.log(event.target.value)
+        setValue(event.target.value)
       }
   
       function handleShowHideClick(){
