@@ -18,7 +18,7 @@ function TextInputFormContainer(){
  
             if(value){
       
-        //  A)  navigate("/play",{state:{guessWord : value}}); // The navigate function is called to navigate to the /play route with the guessWord value
+           navigate("/play",{state:{guessWord : value}}); // The navigate function is called to navigate to the /play route with the guessWord value
         
         //  B)  navigate(`/play?text=${value}`); // QUERY PARAMS
 
