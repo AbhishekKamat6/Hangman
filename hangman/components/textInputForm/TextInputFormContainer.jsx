@@ -15,11 +15,26 @@ function TextInputFormContainer(){
 
       function handleFormSubmit(event){
         event.preventDefault(); // Stops form from submitting
-          setTimeout(() => {
+ 
             if(value){
-              navigate("/play",{state:{guessWord : value}}); // The navigate function is called to navigate to the /play route with the guessWord value
-            }
-          }, 5000);
+      
+        //  A)  navigate("/play",{state:{guessWord : value}}); // The navigate function is called to navigate to the /play route with the guessWord value
+        
+        //  B)  navigate(`/play?text=${value}`); // QUERY PARAMS
+
+        //  C)   navigate (`/play/${value}`);  // PATH PARAMS
+        // IMP -: When you set a path param then you need to define the path in app.jsx like this ( <Route path = '/play/:text' element = {<PlayGame/>}/>)
+        
+        // There are two params that can be passed to the navigate function
+     
+        // 1) Query Params : are extra pieces of information added to the end of a URL after a ? and are repersented in the form of key value pair.They usually provide additional details 
+        // example : "blog?date=2021-09-01&author=John"
+        
+
+        // 2)  Path Params : They are like placeholders in your URL that represent specific pieces of data
+        // example : "blog/2021-09-01/John"  
+
+                     }
       }
   
       function handleTextInput(event){

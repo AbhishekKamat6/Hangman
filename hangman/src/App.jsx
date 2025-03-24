@@ -8,7 +8,8 @@ function App() {
   return (
       <Routes>
         <Route path = '/' element = {<StartGame/>} />{/*says that for which link what page should be shown*/}
-        <Route path = '/play' element = {<PlayGame/>}/>
+        {/* C) <Route path = '/play/:text' element = {<PlayGame/>}/> */}
+        <Route path = '/play' element = {<PlayGame/>}/> 
       </Routes>
   )
 }
