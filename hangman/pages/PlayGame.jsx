@@ -1,5 +1,7 @@
 import { useLocation, useParams, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 import MaskedText from "../components/maskedtext/MaskedText";
+import LetterButtons from "../components/letterbuttons/LetterButtons";
 
 function PlayGame() {
 
@@ -10,15 +12,26 @@ function PlayGame() {
 // B)       const guessWord = searchparams.get("text"); 
          
 // C)    const {text}  =  useParams();
-        
+      
+      const [guessedLetters, setGuessedLetters] = useState([]);
+
+      function handleLetterClick(letter){
+        setGuessedLetters([...guessedLetters, letter]);
+      }
+
         return(
     <>
      {/* A)   <p>This is the word need to guess by Player2 : {guessWord} </p> */}
      {/* B) <p>This is the word need to guess by Player2 : {guessWord}</p> */}
      {/* C) <p>This is the word need to guess by Player2 : {text}</p> */}
      
-     <h1>Play Game</h1>
-      <MaskedText text={guessWord} guessedLetters={['H','E']} />
+      <h1>Play Game</h1>
+      <MaskedText text={guessWord} guessedLetters={guessedLetters} />
+
+      <div>
+        <LetterButtons text={guessWord} guessedLetters={guessedLetters} onLetterClick={handleLetterClick}/>
+      </div>
+     
 
     </>
   )
