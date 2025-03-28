@@ -9,13 +9,10 @@ export function getMaskedString(originalWord, guessedLetters) {
   guessedLetters = guessedLetters.map((letter) => letter.toUpperCase());
 
   originalWord = originalWord.split("").map((letter) => letter.toUpperCase());
+  guessedLetters = new Set (guessedLetters);
 
   const result = originalWord.map((letter) => {
-    const found = guessedLetters.includes(letter);
-    if (found) {
-      guessedLetters = guessedLetters.filter((l) => l !== letter);
-    }
-    return found ? letter : "_";
+    return guessedLetters.has(letter) ? letter : "_";
   });
   // [G,U,E,S,S] [G,E,S]
 
