@@ -2,6 +2,7 @@ import { useLocation, useParams, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import MaskedText from "../components/maskedtext/MaskedText";
 import LetterButtons from "../components/letterbuttons/LetterButtons";
+import Hangman from "../components/hangman/Hangman";
 
 function PlayGame() {
 
@@ -15,7 +16,14 @@ function PlayGame() {
       
       const [guessedLetters, setGuessedLetters] = useState([]);
 
+      const [step,setStep] = useState(0);
+
       function handleLetterClick(letter){
+        if(guessWord.toUpperCase().includes(letter)){
+         console.log("Correct Guess");
+        }else{
+          setStep(step+1);
+        }
         setGuessedLetters([...guessedLetters, letter]);
       }
 
@@ -32,6 +40,11 @@ function PlayGame() {
         <LetterButtons text={guessWord} guessedLetters={guessedLetters} onLetterClick={handleLetterClick}/>
       </div>
      
+      <div>
+        <Hangman step={step}/>
+      </div>
+
+
 
     </>
   )
