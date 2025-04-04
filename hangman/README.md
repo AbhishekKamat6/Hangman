@@ -13,4 +13,4 @@ The hook is called as useEffect()
 Primary use case -: It will help you to control instructins to be executed during different lifecycle events
 Secondary use case -: In useEffect we write a code to get the data
 
-
+npm init -y -: Initializes a new Node.js project by creating a package.json file
