@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import Button from "../components/button/Button";
 import { useContext, useEffect } from "react";
 import { WordContext } from "../context/WordContext"; 
+import { wordStore } from "../stores/WordStore";
 
 function Home(){
 
 
     const {setWordList,word,setWord} = useContext(WordContext); // It expects the object which we provided everywhere in the app using the provider.
+    
+    // const {setWordList} = wordStore();  -- implementation of zustand
 
     useEffect(() => { 
        fetchWord()
