@@ -1,0 +1,26 @@
+import { Link } from "react-router-dom";
+import TextInputFormContainer from "../components/textInputForm/TextInputFormContainer";
+
+function StartGame(){
+
+    // return (
+    //   <div></div>
+    //   <div></div>
+    // )  
+
+    // NOT POSSIBLE the way we are returning the JSX in above logic
+    // From JSX we need to return single parent
+    // And also we cannot wrap inside DIV or any other element because it means we are creating extran node in dom element and to avoid css clashes
+    // So we use fragments ( <>  </> )
+
+
+    return(
+        <>
+         <Link to = "/play">Start a game</Link>
+         <TextInputFormContainer/>
+        </>
+    )
+
+}
+
+export default StartGame;
